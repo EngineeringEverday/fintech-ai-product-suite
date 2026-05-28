@@ -630,7 +630,8 @@
         try {
           const res = await fetch(`${API_BASE}/api/stats`);
           const stats = await res.json();
-          document.querySelector("#stat-merchants").textContent = `${stats.merchants_tracked}+`;
+          const merchants = stats.merchants_tracked || stats.merchant_count || 85;
+          document.querySelector("#stat-merchants").textContent = `${merchants}+`;
         } catch (_) {
           document.querySelector("#stat-merchants").textContent = "85+";
         }
