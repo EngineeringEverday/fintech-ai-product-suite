@@ -1,0 +1,76 @@
+{
+  "risk": {
+    "macro_f1": 0.7607843137254902,
+    "weighted_f1": 0.7925029411764706,
+    "log_loss": 0.547456939625509,
+    "confusion_matrix": [
+      [
+        523,
+        99,
+        4
+      ],
+      [
+        64,
+        182,
+        15
+      ],
+      [
+        11,
+        18,
+        84
+      ]
+    ],
+    "classification_report": {
+      "Low": {
+        "precision": 0.8745819397993311,
+        "recall": 0.8354632587859425,
+        "f1-score": 0.8545751633986928,
+        "support": 626.0
+      },
+      "Medium": {
+        "precision": 0.6086956521739131,
+        "recall": 0.6973180076628352,
+        "f1-score": 0.65,
+        "support": 261.0
+      },
+      "High": {
+        "precision": 0.8155339805825242,
+        "recall": 0.7433628318584071,
+        "f1-score": 0.7777777777777778,
+        "support": 113.0
+      },
+      "accuracy": 0.789,
+      "macro avg": {
+        "precision": 0.7662705241852561,
+        "recall": 0.7587146994357283,
+        "f1-score": 0.7607843137254902,
+        "support": 1000.0
+      },
+      "weighted avg": {
+        "precision": 0.7985131993375978,
+        "recall": 0.789,
+        "f1-score": 0.7925029411764706,
+        "support": 1000.0
+      }
+    }
+  },
+  "churn": {
+    "auc_roc": 0.5558661377275964,
+    "auc_pr": 0.5984939082100593,
+    "log_loss": 0.7331453251939614
+  },
+  "dataset": {
+    "n_train": 4000,
+    "n_test": 1000,
+    "risk_distribution_train": [
+      2502,
+      1046,
+      452
+    ],
+    "risk_distribution_test": [
+      626,
+      261,
+      113
+    ]
+  }
+}

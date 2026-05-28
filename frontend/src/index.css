@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  body {
+    @apply bg-ink-950 text-ink-100 font-sans;
+    background-image:
+      radial-gradient(circle at 20% 0%, rgba(46, 127, 241, 0.06) 0%, transparent 40%),
+      radial-gradient(circle at 80% 100%, rgba(34, 176, 123, 0.05) 0%, transparent 40%);
+    min-height: 100vh;
+  }
+  ::selection {
+    @apply bg-accent/40 text-white;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-ink-900/80 border border-ink-700 rounded-xl backdrop-blur-sm;
+  }
+  .card-soft {
+    @apply bg-ink-900/40 border border-ink-700/60 rounded-xl;
+  }
+  .label {
+    @apply text-[11px] uppercase tracking-[0.12em] text-ink-400 font-medium;
+  }
+  .metric {
+    @apply text-2xl font-semibold tabular-nums tracking-tight;
+  }
+  .pill {
+    @apply inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11px] font-medium;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg
+           text-sm font-medium transition-all duration-200
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-accent;
+  }
+  .btn-primary {
+    @apply btn bg-accent text-white hover:bg-accent-hover;
+  }
+  .btn-ghost {
+    @apply btn bg-transparent text-ink-200 hover:bg-ink-800;
+  }
+  .input {
+    @apply w-full bg-ink-900 border border-ink-700 rounded-lg px-3 py-2 text-sm
+           placeholder:text-ink-400 focus:outline-none focus:border-accent transition;
+  }
+}
+
+/* Score gauge animation */
+@keyframes draw-gauge {
+  from { stroke-dashoffset: 360; }
+}
+.gauge-arc {
+  animation: draw-gauge 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fade-up 0.4s ease-out both; }
+
+/* Tooltip */
+.tooltip {
+  @apply absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1
+         bg-ink-700 text-ink-100 text-xs rounded shadow-lg whitespace-nowrap
+         opacity-0 pointer-events-none transition-opacity duration-150 z-50;
+}
+.has-tooltip:hover .tooltip { @apply opacity-100; }
+
+/* Markdown render */
+.prose-card h1 { @apply text-xl font-semibold mt-4 mb-2 text-ink-50; }
+.prose-card h2 { @apply text-lg font-semibold mt-6 mb-2 text-ink-50 border-b border-ink-700 pb-1; }
+.prose-card h3 { @apply text-base font-semibold mt-4 mb-1 text-ink-100; }
+.prose-card p { @apply text-sm text-ink-200 leading-relaxed mb-3; }
+.prose-card ul { @apply list-disc pl-6 mb-3 text-sm text-ink-200; }
+.prose-card ol { @apply list-decimal pl-6 mb-3 text-sm text-ink-200; }
+.prose-card code { @apply font-mono text-xs bg-ink-800 px-1.5 py-0.5 rounded text-ink-100; }
+.prose-card pre code { @apply block p-3 bg-ink-900 rounded; }
+.prose-card table { @apply w-full text-sm my-3 border-collapse; }
+.prose-card th, .prose-card td { @apply text-left p-2 border-b border-ink-700; }
+.prose-card strong { @apply text-ink-50; }
