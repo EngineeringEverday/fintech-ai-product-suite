@@ -5,7 +5,7 @@ import logging
 from contextlib import asynccontextmanager
 from pathlib import Path
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
@@ -74,8 +74,9 @@ ARTIFACTS_DIR = Path("artifacts")
 
 @app.get("/artifacts/{name}")
 def get_artifact(name: str):
-    p = ARTIFACTS_DIR / name
-    if not p.exists():
+    artifacts_root = ARTIFACTS_DIR.resolve()
+    p = (ARTIFACTS_DIR / name).resolve()
+    if not p.is_relative_to(artifacts_root) or not p.is_file():
         return JSONResponse({"error": "not found"}, status_code=404)
     return FileResponse(str(p))
 
