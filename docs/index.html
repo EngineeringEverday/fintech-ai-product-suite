@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SettleIQ — AI Settlement Intelligence for US Payments Ops</title>
+  <meta name="description" content="SettleIQ is an AI-powered settlement intelligence platform for US payments operations. Six-agent pipeline, 12 use cases, synthetic data, fully deterministic, no API key required." />
+  <meta name="author" content="Prabhjot Singh Ahluwalia" />
+  <meta property="og:title" content="SettleIQ — AI Settlement Intelligence" />
+  <meta property="og:description" content="Six-agent pipeline collapsing US payments settlement workflows into a single chat-driven interface. Live demo and source available." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://prabhjotahluwalia.github.io/SettleIQ/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span>SettleIQ</span>
+      </div>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#pipeline">Pipeline</a>
+        <a href="#setup">Local Setup</a>
+        <a href="https://github.com/PrabhjotAhluwalia/SettleIQ" target="_blank" rel="noopener">GitHub</a>
+        <a class="cta" href="https://settleiq.pplx.app" target="_blank" rel="noopener">Live App ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">Portfolio Prototype · US Payments Ops</span>
+      <h1>SettleIQ — Settlement Intelligence, in one chat.</h1>
+      <p class="tagline">
+        A six-agent AI pipeline that collapses the manual hop between core banking, Snowflake/DWH,
+        Ops dashboards, and helpdesk tools into a single chat-driven interface for
+        <strong>Ops, Helpdesk, Risk, and Product</strong> teams. Deterministic, audited,
+        and runs fully offline on synthetic US payments data.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://settleiq.pplx.app" target="_blank" rel="noopener">
+          Open Live App ↗
+        </a>
+        <a class="btn btn-secondary" href="https://github.com/PrabhjotAhluwalia/SettleIQ" target="_blank" rel="noopener">
+          View on GitHub
+        </a>
+        <a class="btn btn-ghost" href="#setup">Run Locally</a>
+      </div>
+      <div class="callout-note">
+        This GitHub Pages site is a static project page. The interactive Streamlit application
+        runs at <a href="https://settleiq.pplx.app" target="_blank" rel="noopener">settleiq.pplx.app</a> —
+        GitHub Pages itself cannot host Streamlit backends.
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="n">6</div><div class="l">Agent Pipeline</div></div>
+        <div class="stat"><div class="n">12</div><div class="l">Use Cases (UC1–UC12)</div></div>
+        <div class="stat"><div class="n">11,000</div><div class="l">Mock Settlement Events</div></div>
+        <div class="stat"><div class="n">0</div><div class="l">API Keys Required</div></div>
+      </div>
+    </div>
+  </header>
+
+  <section id="why">
+    <div class="container">
+      <h2>Why SettleIQ</h2>
+      <p class="lead">
+        US payments operations teams spend a large share of their day reconciling settlement across
+        siloed tools: a core banking screen for payout status, a Snowflake query for trend analysis,
+        an Ops dashboard for reserve balances, a separate console for ACH/Fedwire/RTP downtime, and
+        a helpdesk queue for chargebacks. SettleIQ unifies that workflow into a chat-driven,
+        MCP-style orchestration layer — with audit logging, sanity validation, and risk gating built in.
+      </p>
+      <div class="badges">
+        <span class="badge ok">Deterministic in mock mode</span>
+        <span class="badge ok">No external API calls</span>
+        <span class="badge">SQLite-backed</span>
+        <span class="badge">Streamlit dashboard</span>
+        <span class="badge warn">Sanity-validated outputs</span>
+        <span class="badge alert">Prompt-injection guard</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="pipeline">
+    <div class="container">
+      <h2>Six-Agent Pipeline</h2>
+      <p class="lead">
+        Every user query flows through a strict, observable pipeline. Each agent has a single
+        responsibility — classification, routing, retrieval, validation, formatting, and audit logging.
+        Failures at any step are logged with hashes and cost estimates.
+      </p>
+      <div class="pipeline">
+        <div class="agent">
+          <div class="num">1</div>
+          <div class="name">Classifier</div>
+          <div class="desc">Regex pre-LLM gate · intent + injection detection</div>
+        </div>
+        <div class="agent">
+          <div class="num">2</div>
+          <div class="name">MCP Router</div>
+          <div class="desc">Extracts date, MID, phone, domain, payout ID</div>
+        </div>
+        <div class="agent">
+          <div class="num">3</div>
+          <div class="name">Analyst</div>
+          <div class="desc">Lazy-loads the right skill, runs SQL on SQLite</div>
+        </div>
+        <div class="agent">
+          <div class="num">4</div>
+          <div class="name">Sanity Validator</div>
+          <div class="desc">$10M cap · negative-reserve check · 10s SLA</div>
+        </div>
+        <div class="agent">
+          <div class="num">5</div>
+          <div class="name">Formatter</div>
+          <div class="desc">Markdown · USD · ET timezone · contextual CTAs</div>
+        </div>
+        <div class="agent">
+          <div class="num">6</div>
+          <div class="name">Auditor</div>
+          <div class="desc">pipeline_logs · trace hash · cost estimate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <h2>Twelve Use Cases</h2>
+      <p class="lead">
+        Each use case is a complete end-to-end path through the pipeline, backed by a dedicated skill module
+        and a deterministic test case. UC12 is the adversarial path: prompt-injection attempts are denied
+        before they reach the router.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <div class="uc">UC1</div>
+          <h3>Settlement Details by MID</h3>
+          <p>Totals, breakdown by status, net amounts, trace numbers, recent events.</p>
+        </div>
+        <div class="card">
+          <div class="uc">UC2</div>
+          <h3>Payout Journey</h3>
+          <p>All settlement events grouped under a single payout ID, cross-MID view.</p>
+        </div>
+        <div class="card">
+          <div class="uc">UC3</div>
+          <h3>Phone Number Lookup</h3>
+          <p>Fuzzy phone match with disambiguation when multiple merchants share a number.</p>
+        </div>
+        <div class="card">
+          <div class="uc">UC4</div>
+          <h3>Settlement Schedule</h3>
+          <p>Hardcoded ACH / Fedwire / RTP timing rules and cutoff windows.</p>
+        </div>
+        <div class="card">
+          <div class="uc">UC5</div>
+          <h3>Reserve Balance</h3>
+          <p>Reserve account balance with risk-tier context and recent reserve movements.</p>
+        </div>
+        <div class="card">
+          <div class="uc">UC6</div>
+          <h3>Rail Downtime</h3>
+          <p>Bank and payment-rail outage windows for ACH / Fedwire / RTP / card networks.</p>
+        </div>
+        <div class="card">
+          <div class="uc">UC7</div>
+          <h3>30-Day Trend</h3>
+          <p>Rolling volume, average settlement time, failure rate, return-code breakdown.</p>
+        </div>
+        <div class="card">
+          <div class="uc">UC8</div>
+          <h3>Failure Diagnostics</h3>
+          <p>R01 / R03 / BANK_TIMEOUT root-cause explanations with contextual next steps.</p>
+        </div>
+        <div class="card">
+          <div class="uc">UC9</div>
+          <h3>Provisional Credit</h3>
+          <p>Confirmed vs. pending provisional credits with timestamps and SLA notes.</p>
+        </div>
+        <div class="card">
+          <div class="uc">UC10</div>
+          <h3>Freeze / On-Hold</h3>
+          <p>Merchant freeze status, hold reason, and risk-team context.</p>
+        </div>
+        <div class="card">
+          <div class="uc">UC11</div>
+          <h3>Chargebacks</h3>
+          <p>Lookup by MID or transaction ID with reason codes (4853 / 4855 / 10.4 / …).</p>
+        </div>
+        <div class="card">
+          <div class="uc">UC12</div>
+          <h3>Injection Guard</h3>
+          <p>Prompt-injection and jailbreak detection — hard denial, logged and blocked.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="data">
+    <div class="container">
+      <div class="twocol">
+        <div>
+          <h2>Synthetic US Payments Data</h2>
+          <p class="lead">
+            The repo ships with a reproducible SQLite mock dataset: 110 US merchants across
+            verticals (rideshare, food delivery, marketplaces, hospitality), 11,000 settlement
+            events spanning ACH / Fedwire / RTP rails, chargeback history with reason codes,
+            and rail downtime windows. Everything is seeded deterministically in roughly one
+            second so the system can be demoed end-to-end on a laptop with no external dependencies.
+          </p>
+          <div class="badges">
+            <span class="badge">110 merchants</span>
+            <span class="badge">11,000 events</span>
+            <span class="badge">ACH / Fedwire / RTP</span>
+            <span class="badge">Chargebacks</span>
+            <span class="badge">Downtime windows</span>
+          </div>
+        </div>
+        <div>
+          <h2>Extension Points</h2>
+          <p class="lead">
+            A <code>USE_REAL_LLM</code> toggle is wired in as an extension point — a real LLM
+            provider (Anthropic, OpenAI) can be plugged into the formatter agent without touching
+            the rest of the pipeline. The skill registry is lazy-loaded, so adding a new use case
+            means adding a single skill module and a router pattern.
+          </p>
+          <div class="badges">
+            <span class="badge ok">LLM-pluggable</span>
+            <span class="badge">Skill registry</span>
+            <span class="badge">Mock Kafka bus</span>
+            <span class="badge">DOMAIN_REGISTRY.json</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="setup">
+    <div class="container">
+      <h2>Run Locally — Three Commands</h2>
+      <p class="lead">
+        The full system runs on a laptop with no API keys and no network access. Clone the repo and run:
+      </p>
+      <pre class="code"><span class="c"># 1. Install dependencies</span>
+<span class="k">pip install</span> -r requirements.txt
+
+<span class="c"># 2. Seed the SQLite mock database (~1 second, deterministic)</span>
+<span class="k">python</span> data/mock_generator.py
+
+<span class="c"># 3. Launch the Streamlit dashboard</span>
+<span class="k">streamlit run</span> dashboard/app.py</pre>
+      <p style="margin-top: 18px; color: var(--text-2);">
+        Or run a single query through the CLI: <code>python pipeline_runner.py "Settlement details for MID01010 last 7 days"</code>.
+        Run <code>python pipeline_runner.py --demo</code> to execute all twelve UCs in sequence.
+      </p>
+      <div class="cta-row" style="margin-top: 22px;">
+        <a class="btn btn-primary" href="https://github.com/PrabhjotAhluwalia/SettleIQ" target="_blank" rel="noopener">
+          Clone the Repo
+        </a>
+        <a class="btn btn-secondary" href="https://github.com/PrabhjotAhluwalia/SettleIQ/blob/main/docs/SAMPLE_QUERIES.md" target="_blank" rel="noopener">
+          Sample Queries (UC1–UC12)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div>
+          Built by <strong>Prabhjot Singh Ahluwalia</strong> &middot;
+          Georgia Tech MSCS (AI Specialization)
+        </div>
+        <div>
+          <a href="https://github.com/PrabhjotAhluwalia/SettleIQ" target="_blank" rel="noopener">Source</a>
+          &middot;
+          <a href="https://settleiq.pplx.app" target="_blank" rel="noopener">Live App</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
