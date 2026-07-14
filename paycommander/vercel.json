@@ -1,5 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
   "buildCommand": "echo 'Using the committed static demo'",
   "outputDirectory": "dist/public",
   "rewrites": [
