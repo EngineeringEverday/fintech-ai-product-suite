@@ -11,7 +11,7 @@ Portfolio-grade merchant risk platform for an Indian payments aggregator in the 
 Built to demonstrate senior PM and ML product judgment: the system turns manual, rule-based merchant review into an explainable risk decisioning workflow for high-volume transaction approval and onboarding.
 
 **Live portfolio demo:** https://merchant-risk-scoring.vercel.app
-**Source:** https://github.com/EngineeringEverday/fintech/tree/main/merchant-risk-scoring
+**Source:** https://github.com/EngineeringEverday/fintech-ai-product-suite/tree/main/merchant-risk-scoring
 
 The Vercel deployment is a static portfolio demo and intentionally uses the frontend's deterministic mock fallback. Run the project locally or with Docker for the complete FastAPI scoring service.
 
