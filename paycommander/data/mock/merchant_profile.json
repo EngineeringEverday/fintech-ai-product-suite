@@ -1,0 +1,682 @@
+[
+  {
+    "mid": "MID01001",
+    "name": "Amazon",
+    "vertical": "E-commerce",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Bank of America Merchant Services"
+  },
+  {
+    "mid": "MID01002",
+    "name": "eBay",
+    "vertical": "E-commerce",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Wells Fargo Merchant Services"
+  },
+  {
+    "mid": "MID01003",
+    "name": "Etsy",
+    "vertical": "E-commerce",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Stripe (Wells Fargo BIN-sponsored)"
+  },
+  {
+    "mid": "MID01004",
+    "name": "Walmart.com",
+    "vertical": "E-commerce",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Adyen N.V."
+  },
+  {
+    "mid": "MID01005",
+    "name": "Target.com",
+    "vertical": "E-commerce",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Fiserv (First Data)"
+  },
+  {
+    "mid": "MID01006",
+    "name": "Wayfair",
+    "vertical": "E-commerce",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Worldpay from FIS"
+  },
+  {
+    "mid": "MID01007",
+    "name": "Newegg",
+    "vertical": "E-commerce",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Global Payments"
+  },
+  {
+    "mid": "MID01008",
+    "name": "Best Buy",
+    "vertical": "E-commerce",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Elavon (U.S. Bank)"
+  },
+  {
+    "mid": "MID01009",
+    "name": "Chewy",
+    "vertical": "E-commerce",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Square Financial Services"
+  },
+  {
+    "mid": "MID01010",
+    "name": "Costco.com",
+    "vertical": "E-commerce",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "JPMorgan Chase Merchant Services"
+  },
+  {
+    "mid": "MID01011",
+    "name": "DoorDash",
+    "vertical": "Food Delivery",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Bank of America Merchant Services"
+  },
+  {
+    "mid": "MID01012",
+    "name": "Uber Eats",
+    "vertical": "Food Delivery",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Wells Fargo Merchant Services"
+  },
+  {
+    "mid": "MID01013",
+    "name": "Grubhub",
+    "vertical": "Food Delivery",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Stripe (Wells Fargo BIN-sponsored)"
+  },
+  {
+    "mid": "MID01014",
+    "name": "Instacart",
+    "vertical": "Food Delivery",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Adyen N.V."
+  },
+  {
+    "mid": "MID01015",
+    "name": "Postmates",
+    "vertical": "Food Delivery",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Fiserv (First Data)"
+  },
+  {
+    "mid": "MID01016",
+    "name": "Caviar",
+    "vertical": "Food Delivery",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Worldpay from FIS"
+  },
+  {
+    "mid": "MID01017",
+    "name": "Gopuff",
+    "vertical": "Food Delivery",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Global Payments"
+  },
+  {
+    "mid": "MID01018",
+    "name": "Uber",
+    "vertical": "Mobility",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Elavon (U.S. Bank)"
+  },
+  {
+    "mid": "MID01019",
+    "name": "Lyft",
+    "vertical": "Mobility",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Square Financial Services"
+  },
+  {
+    "mid": "MID01020",
+    "name": "Turo",
+    "vertical": "Mobility",
+    "primary_payment_method": "Card",
+    "risk_tier": "High",
+    "acquiring_bank": "JPMorgan Chase Merchant Services"
+  },
+  {
+    "mid": "MID01021",
+    "name": "Lime",
+    "vertical": "Mobility",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Bank of America Merchant Services"
+  },
+  {
+    "mid": "MID01022",
+    "name": "Bird",
+    "vertical": "Mobility",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Wells Fargo Merchant Services"
+  },
+  {
+    "mid": "MID01023",
+    "name": "Hertz",
+    "vertical": "Mobility",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Stripe (Wells Fargo BIN-sponsored)"
+  },
+  {
+    "mid": "MID01024",
+    "name": "Avis",
+    "vertical": "Mobility",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Adyen N.V."
+  },
+  {
+    "mid": "MID01025",
+    "name": "Enterprise",
+    "vertical": "Mobility",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Fiserv (First Data)"
+  },
+  {
+    "mid": "MID01026",
+    "name": "Zipcar",
+    "vertical": "Mobility",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Worldpay from FIS"
+  },
+  {
+    "mid": "MID01027",
+    "name": "Netflix",
+    "vertical": "Streaming/SaaS",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Global Payments"
+  },
+  {
+    "mid": "MID01028",
+    "name": "Hulu",
+    "vertical": "Streaming/SaaS",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Elavon (U.S. Bank)"
+  },
+  {
+    "mid": "MID01029",
+    "name": "Disney+",
+    "vertical": "Streaming/SaaS",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Square Financial Services"
+  },
+  {
+    "mid": "MID01030",
+    "name": "Spotify",
+    "vertical": "Streaming/SaaS",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "JPMorgan Chase Merchant Services"
+  },
+  {
+    "mid": "MID01031",
+    "name": "Apple Music",
+    "vertical": "Streaming/SaaS",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Bank of America Merchant Services"
+  },
+  {
+    "mid": "MID01032",
+    "name": "HBO Max",
+    "vertical": "Streaming/SaaS",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Wells Fargo Merchant Services"
+  },
+  {
+    "mid": "MID01033",
+    "name": "Peacock",
+    "vertical": "Streaming/SaaS",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Stripe (Wells Fargo BIN-sponsored)"
+  },
+  {
+    "mid": "MID01034",
+    "name": "Paramount+",
+    "vertical": "Streaming/SaaS",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Adyen N.V."
+  },
+  {
+    "mid": "MID01035",
+    "name": "YouTube Premium",
+    "vertical": "Streaming/SaaS",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Fiserv (First Data)"
+  },
+  {
+    "mid": "MID01036",
+    "name": "Adobe Creative Cloud",
+    "vertical": "Streaming/SaaS",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Worldpay from FIS"
+  },
+  {
+    "mid": "MID01037",
+    "name": "Microsoft 365",
+    "vertical": "Streaming/SaaS",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Global Payments"
+  },
+  {
+    "mid": "MID01038",
+    "name": "Dropbox",
+    "vertical": "Streaming/SaaS",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Elavon (U.S. Bank)"
+  },
+  {
+    "mid": "MID01039",
+    "name": "Slack",
+    "vertical": "Streaming/SaaS",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Square Financial Services"
+  },
+  {
+    "mid": "MID01040",
+    "name": "Zoom",
+    "vertical": "Streaming/SaaS",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "JPMorgan Chase Merchant Services"
+  },
+  {
+    "mid": "MID01041",
+    "name": "Notion",
+    "vertical": "Streaming/SaaS",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Bank of America Merchant Services"
+  },
+  {
+    "mid": "MID01042",
+    "name": "Airbnb",
+    "vertical": "Travel",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Wells Fargo Merchant Services"
+  },
+  {
+    "mid": "MID01043",
+    "name": "Booking.com",
+    "vertical": "Travel",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Stripe (Wells Fargo BIN-sponsored)"
+  },
+  {
+    "mid": "MID01044",
+    "name": "Expedia",
+    "vertical": "Travel",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Adyen N.V."
+  },
+  {
+    "mid": "MID01045",
+    "name": "Vrbo",
+    "vertical": "Travel",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Fiserv (First Data)"
+  },
+  {
+    "mid": "MID01046",
+    "name": "Delta Air Lines",
+    "vertical": "Travel",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Worldpay from FIS"
+  },
+  {
+    "mid": "MID01047",
+    "name": "United Airlines",
+    "vertical": "Travel",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Global Payments"
+  },
+  {
+    "mid": "MID01048",
+    "name": "Southwest Airlines",
+    "vertical": "Travel",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Elavon (U.S. Bank)"
+  },
+  {
+    "mid": "MID01049",
+    "name": "American Airlines",
+    "vertical": "Travel",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Square Financial Services"
+  },
+  {
+    "mid": "MID01050",
+    "name": "JetBlue",
+    "vertical": "Travel",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "JPMorgan Chase Merchant Services"
+  },
+  {
+    "mid": "MID01051",
+    "name": "Marriott",
+    "vertical": "Travel",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Bank of America Merchant Services"
+  },
+  {
+    "mid": "MID01052",
+    "name": "Hilton",
+    "vertical": "Travel",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Wells Fargo Merchant Services"
+  },
+  {
+    "mid": "MID01053",
+    "name": "Hyatt",
+    "vertical": "Travel",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Stripe (Wells Fargo BIN-sponsored)"
+  },
+  {
+    "mid": "MID01054",
+    "name": "Starbucks",
+    "vertical": "Retail/QSR",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Adyen N.V."
+  },
+  {
+    "mid": "MID01055",
+    "name": "McDonald's",
+    "vertical": "Retail/QSR",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Fiserv (First Data)"
+  },
+  {
+    "mid": "MID01056",
+    "name": "Chipotle",
+    "vertical": "Retail/QSR",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Worldpay from FIS"
+  },
+  {
+    "mid": "MID01057",
+    "name": "Domino's",
+    "vertical": "Retail/QSR",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Global Payments"
+  },
+  {
+    "mid": "MID01058",
+    "name": "Subway",
+    "vertical": "Retail/QSR",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Elavon (U.S. Bank)"
+  },
+  {
+    "mid": "MID01059",
+    "name": "Taco Bell",
+    "vertical": "Retail/QSR",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Square Financial Services"
+  },
+  {
+    "mid": "MID01060",
+    "name": "Panera Bread",
+    "vertical": "Retail/QSR",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "JPMorgan Chase Merchant Services"
+  },
+  {
+    "mid": "MID01061",
+    "name": "Dunkin'",
+    "vertical": "Retail/QSR",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Bank of America Merchant Services"
+  },
+  {
+    "mid": "MID01062",
+    "name": "Home Depot",
+    "vertical": "Retail/QSR",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Wells Fargo Merchant Services"
+  },
+  {
+    "mid": "MID01063",
+    "name": "Lowe's",
+    "vertical": "Retail/QSR",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Stripe (Wells Fargo BIN-sponsored)"
+  },
+  {
+    "mid": "MID01064",
+    "name": "CVS",
+    "vertical": "Retail/QSR",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Adyen N.V."
+  },
+  {
+    "mid": "MID01065",
+    "name": "Walgreens",
+    "vertical": "Retail/QSR",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Fiserv (First Data)"
+  },
+  {
+    "mid": "MID01066",
+    "name": "PayPal",
+    "vertical": "Fintech",
+    "primary_payment_method": "ACH",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Worldpay from FIS"
+  },
+  {
+    "mid": "MID01067",
+    "name": "Venmo",
+    "vertical": "Fintech",
+    "primary_payment_method": "ACH",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Global Payments"
+  },
+  {
+    "mid": "MID01068",
+    "name": "Cash App",
+    "vertical": "Fintech",
+    "primary_payment_method": "ACH",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Elavon (U.S. Bank)"
+  },
+  {
+    "mid": "MID01069",
+    "name": "Zelle",
+    "vertical": "Fintech",
+    "primary_payment_method": "ACH",
+    "risk_tier": "Low",
+    "acquiring_bank": "Square Financial Services"
+  },
+  {
+    "mid": "MID01070",
+    "name": "Robinhood",
+    "vertical": "Fintech",
+    "primary_payment_method": "ACH",
+    "risk_tier": "High",
+    "acquiring_bank": "JPMorgan Chase Merchant Services"
+  },
+  {
+    "mid": "MID01071",
+    "name": "Coinbase",
+    "vertical": "Fintech",
+    "primary_payment_method": "ACH",
+    "risk_tier": "High",
+    "acquiring_bank": "Bank of America Merchant Services"
+  },
+  {
+    "mid": "MID01072",
+    "name": "Chime",
+    "vertical": "Fintech",
+    "primary_payment_method": "ACH",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Wells Fargo Merchant Services"
+  },
+  {
+    "mid": "MID01073",
+    "name": "SoFi",
+    "vertical": "Fintech",
+    "primary_payment_method": "ACH",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Stripe (Wells Fargo BIN-sponsored)"
+  },
+  {
+    "mid": "MID01074",
+    "name": "Plaid",
+    "vertical": "Fintech",
+    "primary_payment_method": "ACH",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Adyen N.V."
+  },
+  {
+    "mid": "MID01075",
+    "name": "Stripe Treasury",
+    "vertical": "Fintech",
+    "primary_payment_method": "ACH",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Fiserv (First Data)"
+  },
+  {
+    "mid": "MID01076",
+    "name": "Brex",
+    "vertical": "Fintech",
+    "primary_payment_method": "ACH",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Worldpay from FIS"
+  },
+  {
+    "mid": "MID01077",
+    "name": "Ramp",
+    "vertical": "Fintech",
+    "primary_payment_method": "ACH",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Global Payments"
+  },
+  {
+    "mid": "MID01078",
+    "name": "Teladoc",
+    "vertical": "Healthcare",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Elavon (U.S. Bank)"
+  },
+  {
+    "mid": "MID01079",
+    "name": "CVS Health",
+    "vertical": "Healthcare",
+    "primary_payment_method": "ACH",
+    "risk_tier": "Low",
+    "acquiring_bank": "Square Financial Services"
+  },
+  {
+    "mid": "MID01080",
+    "name": "Walgreens Health",
+    "vertical": "Healthcare",
+    "primary_payment_method": "ACH",
+    "risk_tier": "Low",
+    "acquiring_bank": "JPMorgan Chase Merchant Services"
+  },
+  {
+    "mid": "MID01081",
+    "name": "One Medical",
+    "vertical": "Healthcare",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Bank of America Merchant Services"
+  },
+  {
+    "mid": "MID01082",
+    "name": "Hims & Hers",
+    "vertical": "Healthcare",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Wells Fargo Merchant Services"
+  },
+  {
+    "mid": "MID01083",
+    "name": "Ro",
+    "vertical": "Healthcare",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Stripe (Wells Fargo BIN-sponsored)"
+  },
+  {
+    "mid": "MID01084",
+    "name": "GoodRx",
+    "vertical": "Healthcare",
+    "primary_payment_method": "Card",
+    "risk_tier": "Low",
+    "acquiring_bank": "Adyen N.V."
+  },
+  {
+    "mid": "MID01085",
+    "name": "Capsule Pharmacy",
+    "vertical": "Healthcare",
+    "primary_payment_method": "Card",
+    "risk_tier": "Medium",
+    "acquiring_bank": "Fiserv (First Data)"
+  }
+]

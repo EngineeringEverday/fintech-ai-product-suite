@@ -1,0 +1,7 @@
+{
+  "authorization_rate": "skills/domains/authorization_rate.py",
+  "payment_volume": "skills/domains/payment_volume.py",
+  "decline_analysis": "skills/domains/decline_analysis.py",
+  "chargeback_rate": "skills/domains/chargeback_rate.py",
+  "fraud_signals": "skills/domains/fraud_signals.py"
+}
