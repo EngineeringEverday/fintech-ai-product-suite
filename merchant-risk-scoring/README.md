@@ -12,7 +12,7 @@ Built to demonstrate senior PM and ML product judgment: the system turns manual,
 
 **Full live demo:** https://sentinel-merchant-risk.pplx.app  
 **GitHub Pages static demo:** https://prabhjotahluwalia.github.io/merchant-risk-scoring/  
-**Source:** https://github.com/PrabhjotAhluwalia/merchant-risk-scoring
+**Source:** https://github.com/EngineeringEverday/fintech/tree/main/merchant-risk-scoring
 
 The `pplx.app` deployment runs the FastAPI backend. The GitHub Pages deployment is a static portfolio demo and intentionally uses the frontend's deterministic mock fallback because GitHub Pages cannot run Python/FastAPI services.
 
