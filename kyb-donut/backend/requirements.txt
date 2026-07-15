@@ -1,0 +1,21 @@
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-multipart==0.0.17
+pydantic==2.9.2
+pydantic-settings==2.6.1
+sqlalchemy==2.0.36
+celery==5.4.0
+redis==5.2.0
+Pillow==11.0.0
+reportlab==4.2.5
+Faker==30.8.2
+rapidfuzz==3.10.1
+python-dateutil==2.9.0.post0
+numpy==1.26.4
+mlflow==2.16.2
+# ML stack - heavy, only required when MODEL_MODE=donut. CPU torch wheels.
+torch==2.4.1 ; sys_platform != "darwin" or python_version < "3.13"
+transformers==4.45.2
+sentencepiece==0.2.0
+pytest==8.3.3
+httpx==0.27.2

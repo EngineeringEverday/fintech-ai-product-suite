@@ -1,8 +1,8 @@
-# Fintech AI Product Suite
+# AI Projects
 
-Six portfolio-grade products spanning contract compliance, merchant operations, risk, payment analytics, network intelligence, and settlement operations. The suite demonstrates how an AI product manager can move from a business problem to a working product, measurable decision logic, explainability, operational safeguards, and an interview-ready product narrative.
+Nine portfolio-grade AI products spanning product discovery, document intelligence, customer feedback, contract compliance, merchant operations, risk, payment analytics, network intelligence, and settlement operations. The collection demonstrates how an AI product manager can move from a business problem to a working product, measurable decision logic, explainability, operational safeguards, and an interview-ready product narrative.
 
-[![Monorepo CI](https://github.com/EngineeringEverday/fintech-ai-product-suite/actions/workflows/ci.yml/badge.svg)](https://github.com/EngineeringEverday/fintech-ai-product-suite/actions/workflows/ci.yml)
+[![Monorepo CI](https://github.com/EngineeringEverday/AI-Projects/actions/workflows/ci.yml/badge.svg)](https://github.com/EngineeringEverday/AI-Projects/actions/workflows/ci.yml)
 
 ## Product portfolio
 
@@ -14,8 +14,11 @@ Six portfolio-grade products spanning contract compliance, merchant operations, 
 | **SettleIQ** | Settlement teams investigate payout status, reserves, chargebacks, and rail failures across siloed systems. | MCP-style skill routing, seven settlement domains, safety gates, and a reproducible synthetic operations environment. | [Open demo](https://settleiq.vercel.app) | [`settleiq/`](settleiq/) |
 | **MerchVault** | Payments operations teams need one place to review merchant compliance, risk, documents, and support history. | Next.js merchant-intelligence console covering KYC, UBO screening, risk tiering, audit trails, and communications. | [Open demo](https://merchvault-snowy.vercel.app) | [`merchvault/`](merchvault/) |
 | **GraphLens / OpenCMS Payments** | Analysts need to understand complex financial relationships in CMS Open Payments data. | Svelte, FastAPI, and graph analytics for temporal networks, communities, anomalies, and interactive investigation. | [Open demo](https://open-cms-payments.vercel.app) | [`open-cms-payments/`](open-cms-payments/) |
+| **InsightDraft** | Product teams need to convert raw research into grounded, reviewable product requirements. | Multi-agent research, synthesis, and strategy workflow with confidence UX and human review. | [Open demo](https://insightdraft.vercel.app) | [`insightdraft/`](insightdraft/) |
+| **KYB Donut** | Fintech onboarding teams need structured, validated data from complex merchant documents. | OCR-free document understanding with deterministic validation, confidence thresholds, and review routing. | [Open demo](https://kyb-donut.vercel.app) | [`kyb-donut/`](kyb-donut/) |
+| **SignalMap** | Product teams need to turn unstructured customer reviews into prioritized product intelligence. | Multi-agent semantic clustering, sentiment analysis, trend detection, and action recommendations. | [Open demo](https://signalmap.vercel.app) | [`signalmap/`](signalmap/) |
 
-All six public portfolio endpoints are served through Vercel. The browser demos use deterministic or static fallbacks where applicable so they remain recruiter-friendly without credentials or paid model calls. The repository includes the fuller local implementations.
+All nine public portfolio endpoints are served through Vercel. The browser demos use deterministic or static fallbacks where applicable so they remain recruiter-friendly without credentials or paid model calls. The repository includes the fuller local implementations.
 
 ## How the suite fits together
 
@@ -33,7 +36,7 @@ flowchart LR
     G --> O[Operational observability]
 ```
 
-The four core workflow products cover a coherent operating journey: contract review, merchant decisioning, transaction analytics, and post-transaction settlement. MerchVault adds the merchant-operations control plane, while GraphLens demonstrates network-level payment analysis.
+The four core fintech workflow products cover a coherent operating journey: contract review, merchant decisioning, transaction analytics, and post-transaction settlement. MerchVault adds the merchant-operations control plane, while GraphLens demonstrates network-level payment analysis. InsightDraft, KYB Donut, and SignalMap broaden the collection into product discovery, document AI, and customer intelligence.
 
 ## Architecture at a glance
 
@@ -45,17 +48,23 @@ The four core workflow products cover a coherent operating journey: contract rev
 | SettleIQ | Python, Streamlit, SQLite | Static Vercel portfolio application | Six-agent orchestration, seven payment skills, generated settlement data, and local dashboard |
 | MerchVault | Next.js, TypeScript, Tailwind | Vercel application | Merchant compliance, risk, document, audit, and support workflows |
 | GraphLens / OpenCMS Payments | Svelte, Vite, FastAPI, graph analytics | Static Vercel frontend | Python API, temporal graph construction, anomaly analysis, and processed public data |
+| InsightDraft | React, TypeScript, Vite, multi-agent LLM workflow | Static Vercel application | Research synthesis, confidence UX, evidence traceability, and human review |
+| KYB Donut | React, FastAPI, Celery, Donut | Static Vercel frontend | Document-AI inference, validation, batch processing, analytics, and feedback workflows |
+| SignalMap | React, TypeScript, Vite, multi-agent LLM workflow | Static Vercel application | Semantic review clustering, sentiment timelines, synthesis, triage, and export |
 
 ## Repository structure
 
 ```text
-fintech-ai-product-suite/
+AI-Projects/
 ├── .github/workflows/ci.yml
 ├── clauseguard/
+├── insightdraft/
+├── kyb-donut/
 ├── merchant-risk-scoring/
 ├── merchvault/
 ├── open-cms-payments/
 ├── paycommander/
+├── signalmap/
 ├── settleiq/
 └── README.md
 ```
@@ -99,6 +108,21 @@ npm run dev
 cd open-cms-payments/frontend
 npm ci
 npm run dev
+
+# InsightDraft
+cd insightdraft
+npm ci
+npm run dev
+
+# KYB Donut frontend
+cd kyb-donut/frontend
+npm ci
+npm run dev
+
+# SignalMap
+cd signalmap
+npm ci
+npm run dev
 ```
 
 ## Data, safety, and limitations
@@ -119,7 +143,10 @@ The root workflow validates:
 - SettleIQ data generation, end-to-end demo execution, and Python compilation
 - MerchVault production build
 - GraphLens / OpenCMS Payments frontend build
+- InsightDraft production build
+- KYB Donut frontend type-check and production build
+- SignalMap production build
 
 ## Repository scope
 
-This public repository contains the code and technical documentation for these six related fintech applications. The private `Portfolio` repository remains the canonical home for cross-project descriptions, comparisons, interview positioning, and the complete project catalog.
+This public repository contains the code and technical documentation for all nine AI product applications. The private `Portfolio` repository remains the canonical home for cross-project descriptions, comparisons, interview positioning, and the complete project catalog.

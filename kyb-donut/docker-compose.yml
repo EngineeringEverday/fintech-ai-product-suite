@@ -1,0 +1,88 @@
+version: "3.9"
+
+# KYB Donut - merchant onboarding document extraction
+# Spin up: docker compose up --build
+# Services: FastAPI (8000), React (5173), Redis (6379), Celery worker, MLflow (5500)
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: kyb_redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: kyb_backend
+    env_file:
+      - ./.env
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - DATABASE_URL=sqlite:////data/kyb.db
+      - MODEL_MODE=${MODEL_MODE:-mock}
+      - MLFLOW_TRACKING_URI=http://mlflow:5500
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - kyb_data:/data
+    depends_on:
+      redis:
+        condition: service_healthy
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  worker:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: kyb_worker
+    env_file:
+      - ./.env
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - DATABASE_URL=sqlite:////data/kyb.db
+      - MODEL_MODE=${MODEL_MODE:-mock}
+      - MLFLOW_TRACKING_URI=http://mlflow:5500
+    volumes:
+      - ./backend:/app
+      - kyb_data:/data
+    depends_on:
+      redis:
+        condition: service_healthy
+    command: celery -A app.workers.celery_app worker --loglevel=info --concurrency=2
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.16.2
+    container_name: kyb_mlflow
+    ports:
+      - "5500:5500"
+    volumes:
+      - kyb_mlflow:/mlruns
+    command: mlflow server --host 0.0.0.0 --port 5500 --backend-store-uri sqlite:////mlruns/mlflow.db --default-artifact-root /mlruns
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: kyb_frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_BASE=http://localhost:8000
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    command: npm run dev -- --host 0.0.0.0
+
+volumes:
+  kyb_data:
+  kyb_mlflow:

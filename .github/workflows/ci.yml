@@ -12,9 +12,12 @@ jobs:
       matrix:
         project:
           - clauseguard
+          - insightdraft
+          - kyb-donut/frontend
           - merchant-risk-scoring/frontend
           - merchvault
           - open-cms-payments/frontend
+          - signalmap
     defaults:
       run:
         working-directory: ${{ matrix.project }}
